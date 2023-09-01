@@ -12,6 +12,7 @@ This portion of the assignment will not be graded, but this gives you some probl
 check, if you do not complete the generative AI portion of the assignment.
 """
 
+from msilib import sequence
 from typing import List, TypeVar
 
 
@@ -25,8 +26,10 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
-
+    if n<0:
+        return -1*n
+    else: 
+        return n
 
 def factorial(n: int) -> int:
     """Takes a number n, and computes the factorial n! You can assume the passed in
@@ -38,91 +41,95 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    numbers = [1, 2, 3, 4, 5]
+
+    for n in numbers:
+        
+
+# T = TypeVar("T")
 
 
-T = TypeVar("T")
+# def every_other(lst: List[T]) -> List[T]:
+#     """Takes a list and returns a list of every other element in the list, starting with
+#     the first.
+
+#     Args:
+#         lst - a list of any (constrained by type T to be the same type as the returned
+#             list)
+
+#     Returns:
+#         a list of every of other item in the original list starting with the first
+#     """
+#     raise NotImplementedError("every_other")
 
 
-def every_other(lst: List[T]) -> List[T]:
-    """Takes a list and returns a list of every other element in the list, starting with
-    the first.
+# def sum_list(lst: List[int]) -> int:
+#     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
+#     use the built in function `sum`.
 
-    Args:
-        lst - a list of any (constrained by type T to be the same type as the returned
-            list)
+#     Args:
+#         lst - a list of numbers
 
-    Returns:
-        a list of every of other item in the original list starting with the first
-    """
-    raise NotImplementedError("every_other")
-
-
-def sum_list(lst: List[int]) -> int:
-    """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
-    use the built in function `sum`.
-
-    Args:
-        lst - a list of numbers
-
-    Returns:
-        the sum of the passed in list
-    """
-    raise NotImplementedError("sum_list")
+#     Returns:
+#         the sum of the passed in list
+#     """
+#     raise NotImplementedError("sum_list")
 
 
-def mean(lst: List[int]) -> float:
-    """Takes a list of numbers, and returns the mean of the numbers.
+# def mean(lst: List[int]) -> float:
+#     """Takes a list of numbers, and returns the mean of the numbers.
 
-    Args:
-        lst - a list of numbers
+#     Args:
+#         lst - a list of numbers
 
-    Returns:
-        the mean of the passed in list
-    """
-    raise NotImplementedError("mean")
-
-
-def median(lst: List[int]) -> float:
-    """Takes an ordered list of numbers, and returns the median of the numbers.
-
-    If the list has an even number of values, it computes the mean of the two center
-    values.
-
-    Args:
-        lst - an ordered list of numbers
-
-    Returns:
-        the median of the passed in list
-    """
-    raise NotImplementedError("median")
+#     Returns:
+#         the mean of the passed in list
+#     """
+#     raise NotImplementedError("mean")
 
 
-def duck_duck_goose(lst: List[str]) -> List[str]:
-    """Given an list of names (strings), play 'duck duck goose' with it, knocking out
-    every third name (wrapping around) until only two names are left.
+# def median(lst: List[int]) -> float:
+#     """Takes an ordered list of numbers, and returns the median of the numbers.
 
-    In other words, when you hit the end of the list, wrap around and keep counting from
-    where you were.
+#     If the list has an even number of values, it computes the mean of the two center
+#     values.
 
-    For example, if given this list ['Nathan', 'Sasha', 'Sara', 'Jennie'], you'd first
-    knock out Sara. Then first 'duck' on Jennie, wrap around to 'duck' on Nathan and
-    'goose' on Sasha - knocking him out and leaving only Nathan and Jennie.
+#     Args:
+#         lst - an ordered list of numbers
 
-    You may assume the list has 3+ names to start
+#     Returns:
+#         the median of the passed in list
+#     """
+#     raise NotImplementedError("median")
 
-    Args:
-        lst - a list of names (strings)
 
-    Returns:
-        the resulting list after playing duck duck goose
-    """
-    raise NotImplementedError("duck_duck_goose")
+# def duck_duck_goose(lst: List[str]) -> List[str]:
+#     """Given an list of names (strings), play 'duck duck goose' with it, knocking out
+#     every third name (wrapping around) until only two names are left.
+
+#     In other words, when you hit the end of the list, wrap around and keep counting from
+#     where you were.
+
+#     For example, if given this list ['Nathan', 'Sasha', 'Sara', 'Jennie'], you'd first
+#     knock out Sara. Then first 'duck' on Jennie, wrap around to 'duck' on Nathan and
+#     'goose' on Sasha - knocking him out and leaving only Nathan and Jennie.
+
+#     You may assume the list has 3+ names to start
+
+#     Args:
+#         lst - a list of names (strings)
+
+#     Returns:
+#         the resulting list after playing duck duck goose
+#     """
+#     raise NotImplementedError("duck_duck_goose")
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
+    assert absolute(1) == 1, "absolute of -1 failed"
+
     assert factorial(4) == 24, "factorial of 4 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
