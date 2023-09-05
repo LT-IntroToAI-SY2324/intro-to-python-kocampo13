@@ -45,6 +45,7 @@ def factorial(n: int) -> int:
 
     for n in numbers:
         
+        
 
 # T = TypeVar("T")
 
