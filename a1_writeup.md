@@ -16,7 +16,6 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 Python is a bit different from Java but there still are enough similarities that make it understandable. I do still make some mistakes while typing and I am typing as if I am coding in Java.
 
 2. Describe some similarities and differences that you found between python and other programming languages you have used in the past?
-
-
+There are some similarites but the syntax is a lot easier to understand in Python than in Java. Indentation is very important in Python since there are no brackets required like it is in Java. 
 
 3. What are some things that you learned through this assignment?
