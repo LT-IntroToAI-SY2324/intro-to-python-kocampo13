@@ -44,24 +44,25 @@ def factorial(n: int) -> int:
     numbers = [1, 2, 3, 4, 5]
 
     for n in numbers:
+
+    
         
-        
 
-# T = TypeVar("T")
+T = TypeVar("T")
 
 
-# def every_other(lst: List[T]) -> List[T]:
-#     """Takes a list and returns a list of every other element in the list, starting with
-#     the first.
+def every_other(lst: List[T]) -> List[T]:
+    """Takes a list and returns a list of every other element in the list, starting with
+    the first.
 
-#     Args:
-#         lst - a list of any (constrained by type T to be the same type as the returned
-#             list)
+    Args:
+        lst - a list of any (constrained by type T to be the same type as the returned
+            list)
 
-#     Returns:
-#         a list of every of other item in the original list starting with the first
-#     """
-#     raise NotImplementedError("every_other")
+    Returns:
+        a list of every of other item in the original list starting with the first
+    """
+    
 
 
 # def sum_list(lst: List[int]) -> int:
