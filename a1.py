@@ -40,12 +40,11 @@ def factorial(n: int) -> int:
 
     Returns:
         factorial of the passed in number
-    """
-    numbers = [1, 2, 3, 4, 5]
-
-    for n in numbers:
-
-    
+    # """
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
         
 
 T = TypeVar("T")
@@ -62,6 +61,9 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
+
+    
+
     
 
 
