@@ -33,7 +33,8 @@ Write a program that takes a string as input and prints its reverse.
 Create a program that converts temperatures between Fahrenheit and Celsius.
 
 **7. Guess the Number:**
-Implement a simple number guessing game where the program generates a random number and the user tries to guess it.
+
+import random
 
 **8. Hangman Game:**
 Create a text-based Hangman game where a player tries to guess a hidden word letter by letter.
