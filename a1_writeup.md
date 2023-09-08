@@ -19,3 +19,4 @@ Python is a bit different from Java but there still are enough similarities that
 There are some similarites but the syntax is a lot easier to understand in Python than in Java. Indentation is very important in Python since there are no brackets required like it is in Java. A similarity is that loops are almost the same.
 
 3. What are some things that you learned through this assignment?
+I learned that python is an 
