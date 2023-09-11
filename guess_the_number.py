@@ -14,10 +14,10 @@ def guess_number():
 
 guess = guess_number()
 print(guess)
-
 def check_num(person, computer):
    print(f"You guessed {person}, Computer chose {computer}")
-   if person == computer:
-      print("Correct! :)")
-   elif person == 
+   # if person == computer:
+   #    print("Correct! :)")
+   # elif person != computer:
+   #    return "Incorrect guess"
       

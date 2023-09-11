@@ -13,6 +13,7 @@ check, if you do not complete the generative AI portion of the assignment.
 """
 
 from msilib import sequence
+from re import X
 from typing import List, TypeVar
 
 
@@ -41,15 +42,14 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     # """
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
-        
+    
+    result = 1
+    for x in range(1, n + 1):
+        result *= x 
+    return result
+
 
 T = TypeVar("T")
-
-
 def every_other(lst: List[T]) -> List[T]:
     """Takes a list and returns a list of every other element in the list, starting with
     the first.
@@ -61,35 +61,39 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
+    # new_list = []
+    # for i in range(len(lst)):
+    #     if i % 2 == 0:
+    #         new_list.append(lst[i])
+    #     return new_list
+    return lst[::2]
 
+def sum_list(lst: List[int]) -> int:
+    """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
+    use the built in function `sum`.
+
+    Args:
+        lst - a list of numbers
+
+    Returns:
+        the sum of the passed in list
+    """
     
 
-    
 
+def mean(lst: List[int]) -> float:
+    """Takes a list of numbers, and returns the mean of the numbers.
 
-# def sum_list(lst: List[int]) -> int:
-#     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
-#     use the built in function `sum`.
+    Args:
+        lst - a list of numbers
 
-#     Args:
-#         lst - a list of numbers
-
-#     Returns:
-#         the sum of the passed in list
-#     """
-#     raise NotImplementedError("sum_list")
-
-
-# def mean(lst: List[int]) -> float:
-#     """Takes a list of numbers, and returns the mean of the numbers.
-
-#     Args:
-#         lst - a list of numbers
-
-#     Returns:
-#         the mean of the passed in list
-#     """
-#     raise NotImplementedError("mean")
+    Returns:
+        the mean of the passed in list
+    """
+    b = 0
+    for el in lst:
+        s += el + b
+    return b
 
 
 # def median(lst: List[int]) -> float:

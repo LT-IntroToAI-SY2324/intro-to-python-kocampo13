@@ -13,10 +13,10 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 ## Reflection Questions
 
 1. What is your initial thoughts about the python programming language?
-Python is a bit different from Java but there still are enough similarities that make it understandable. I do still make some mistakes while typing and I am typing as if I am coding in Java.
+Python is a bit different from Java but I thought that they were going to be completely diferenta nd more difficult to understand. 
 
 2. Describe some similarities and differences that you found between python and other programming languages you have used in the past?
-There are some similarites but the syntax is a lot easier to understand in Python than in Java. Indentation is very important in Python since there are no brackets required like it is in Java. A similarity is that loops are almost the same.
+There are some similarites but the syntax is a lot easier to understand in Python than in Java. Indentation is very important in Python since there are no brackets required like it is in Java. A similarity is that loops are almost the same but there are no () or ; in Python.
 
 3. What are some things that you learned through this assignment?
-I learned that python is an 
+I learned that python is different from Java but there are still similarities that help understand each language. 

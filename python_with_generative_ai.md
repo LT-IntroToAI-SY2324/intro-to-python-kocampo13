@@ -34,7 +34,7 @@ Create a program that converts temperatures between Fahrenheit and Celsius.
 
 **7. Guess the Number:**
 
-import random
+In another file
 
 **8. Hangman Game:**
 Create a text-based Hangman game where a player tries to guess a hidden word letter by letter.
