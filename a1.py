@@ -78,7 +78,7 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    
+
 
 
 def mean(lst: List[int]) -> float:
@@ -90,10 +90,7 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    b = 0
-    for el in lst:
-        s += el + b
-    return b
+    
 
 
 # def median(lst: List[int]) -> float:
