@@ -78,7 +78,7 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-
+    
 
 
 def mean(lst: List[int]) -> float:
