@@ -13,6 +13,7 @@ check, if you do not complete the generative AI portion of the assignment.
 """
 
 from msilib import sequence
+from os import lstat
 from re import X
 from typing import List, TypeVar
 
@@ -78,7 +79,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    
+    s = 0
+    for el in lst:
+        s = s + el
+    return s
 
 
 def mean(lst: List[int]) -> float:
@@ -90,44 +94,72 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    
+    return sum_list(lst)/len(lst) if lst else 0
 
 
-# def median(lst: List[int]) -> float:
-#     """Takes an ordered list of numbers, and returns the median of the numbers.
+def median(lst: List[int]) -> float:
+    """Takes an ordered list of numbers, and returns the median of the numbers.
 
-#     If the list has an even number of values, it computes the mean of the two center
-#     values.
+    If the list has an even number of values, it computes the mean of the two center
+    values.
 
-#     Args:
-#         lst - an ordered list of numbers
+    Args:
+        lst - an ordered list of numbers
 
-#     Returns:
-#         the median of the passed in list
-#     """
-#     raise NotImplementedError("median")
+    Returns:
+        the median of the passed in list
+    """
+    if len(lst) % 2 == 1
+        return lst[len(lst)//2]
+    else:
+        el1 = lst[len(lst)//2]
+        el2 = lst[len(lst)//2 - 1]
+        return (el1 + el2) / 2
+
+def duck_duck_goose(lst: List[str]) -> List[str]:
+    """Given an list of names (strings), play 'duck duck goose' with it, knocking out
+    every third name (wrapping around) until only two names are left.
+
+    In other words, when you hit the end of the list, wrap around and keep counting from
+    where you were.
+
+    For example, if given this list ['Nathan', 'Sasha', 'Sara', 'Jennie'], you'd first
+    knock out Sara. Then first 'duck' on Jennie, wrap around to 'duck' on Nathan and
+    'goose' on Sasha - knocking him out and leaving only Nathan and Jennie.
+
+    You may assume the list has 3+ names to start
+
+    Args:
+        lst - a list of names (strings)
+
+    Returns:
+        the resulting list after playing duck duck goose
+    """
+i = 0
+while len(lst) > 2:
+    i += 2
+    if i >= len(lst):
+        i -= len(lst)
+    lst.pop(i)
+return lst
 
 
-# def duck_duck_goose(lst: List[str]) -> List[str]:
-#     """Given an list of names (strings), play 'duck duck goose' with it, knocking out
-#     every third name (wrapping around) until only two names are left.
+# solution
+i = 0
+current = "duck"
+while len(lst) > 2: 
+    if current == "duck":
+        current = "duck2"
+        i += 1
+    elif current = "duck2":
+        current = "goose"
+        i += 1
+    else: #current = goose 
+        current = "duck1"
+        lst.pop(i)
 
-#     In other words, when you hit the end of the list, wrap around and keep counting from
-#     where you were.
-
-#     For example, if given this list ['Nathan', 'Sasha', 'Sara', 'Jennie'], you'd first
-#     knock out Sara. Then first 'duck' on Jennie, wrap around to 'duck' on Nathan and
-#     'goose' on Sasha - knocking him out and leaving only Nathan and Jennie.
-
-#     You may assume the list has 3+ names to start
-
-#     Args:
-#         lst - a list of names (strings)
-
-#     Returns:
-#         the resulting list after playing duck duck goose
-#     """
-#     raise NotImplementedError("duck_duck_goose")
+    i %= len(lst)
+return lst
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
